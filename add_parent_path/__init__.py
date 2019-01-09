@@ -1,4 +1,4 @@
-"""import_parent_dir - """
+"""add_parent_path - """
 
 __version__ = '0.1.0'
 __author__ = 'fx-kirin <fx.kirin@gmail.com>'
@@ -9,7 +9,7 @@ import sys
 import inspect
 
 
-def import_parent(count=1):
+def add_parent_path(count=1):
     caller_file_path = os.path.abspath(inspect.stack()[1].filename)
     import_file_path = os.path.dirname(caller_file_path)
     for _ in range(count):
