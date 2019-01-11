@@ -14,6 +14,18 @@ add_parent_path
 Usage
 -----
 
+
+   # Append to syspath and delete when the exist of with statement.
+   with add_parent_path(1):
+       # Import modules in the parent path
+       pass
+
+
+   add_parent_path(1)
+
+
+
+
 Installation
 ------------
 
