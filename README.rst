@@ -1,36 +1,25 @@
+
 add_parent_path
-=================
-
-.. image:: https://img.shields.io/pypi/v/add_parent_path.svg
-    :target: https://pypi.python.org/pypi/add_parent_path
-    :alt: Latest PyPI version
-
-.. image:: .png
-   :target: 
-   :alt: Latest Travis CI build status
-
-
+===============
 
 Usage
 -----
 
+.. code-block::
+
+   # Just add path
+   add_parent_path(1)
 
    # Append to syspath and delete when the exist of with statement.
    with add_parent_path(1):
-       # Import modules in the parent path
-       pass
-
-
-   add_parent_path(1)
-
-
-
+      # Import modules in the parent path
+      pass
 
 Installation
 ------------
 
 Requirements
-^^^^^^^^^^^^
+------------
 
 Compatibility
 -------------
@@ -41,4 +30,4 @@ Licence
 Authors
 -------
 
-`add_parent_path` was written by `fx-kirin <fx.kirin@gmail.com>`_.
+``add_parent_path`` was written by `fx-kirin <fx.kirin@gmail.com>`_.
