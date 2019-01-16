@@ -11,7 +11,7 @@ from pathlib import Path
 
 def add_parent_path(count=1):
     caller_file_path = Path(inspect.stack()[1].filename).absolute()
-    import_file_path = str(caller_file_path.parents[count].absolute())
+    import_file_path = str(caller_file_path.parents[count])
 
     if import_file_path not in sys.path:
         sys.path.append(import_file_path)
