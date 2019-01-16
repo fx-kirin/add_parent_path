@@ -1,6 +1,6 @@
 """add_parent_path - """
 
-__version__ = '0.1.3'
+__version__ = '0.1.5'
 __author__ = 'fx-kirin <fx.kirin@gmail.com>'
 __all__ = []
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 def add_parent_path(count=1):
-    caller_file_path = Path(inspect.stack()[1].filename)
+    caller_file_path = Path(inspect.stack()[1].filename).absolute()
     import_file_path = str(caller_file_path.parents[count].absolute())
 
     if import_file_path not in sys.path:
