@@ -15,7 +15,7 @@ def read(filename):
 
 setup(
     name="add_parent_path",
-    version="0.1.7",
+    version="0.1.8",
     url="https://github.com/fx-kirin/add_parent_path",
     license='MIT',
 
