@@ -1,6 +1,6 @@
 """add_parent_path - """
 
-__version__ = '0.1.10'
+__version__ = '0.1.11'
 __author__ = 'fx-kirin <fx.kirin@gmail.com>'
 __all__ = ['add_parent_path']
 
@@ -19,7 +19,7 @@ def add_parent_path(count=1, child_path=None, insert_to_front: bool = True):
         import_file_path = import_file_path / child_path
 
     import_file_path = str(import_file_path)
-    add_sys_path_temporarily(import_file_path, insert_to_front)
+    return add_sys_path_temporarily(import_file_path, insert_to_front)
 
 
 def add_sys_path_temporarily(import_file_path, insert_to_front: bool = True):
