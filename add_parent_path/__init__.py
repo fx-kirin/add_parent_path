@@ -1,21 +1,23 @@
 """add_parent_path - """
 
-__version__ = '0.1.7'
+__version__ = '0.1.9'
 __author__ = 'fx-kirin <fx.kirin@gmail.com>'
-__all__ = []
+__all__ = ['add_parent_path']
 
 import sys
 import inspect
-from pathlib2 import Path
+from pathlib import Path
 
 
 def add_parent_path(count=1, child_path=None, insert_to_front: bool = True):
     caller_file_path = Path(inspect.stack()[1][1]).absolute()
     import_file_path = str(caller_file_path.parents[count])
-
     if child_path:
         import_file_path = import_file_path / child_path
+    add_sys_paty_temporarily(import_file_path, insert_to_front)
 
+
+def add_sys_paty_temporarily(import_file_path, insert_to_front: bool = True):
     if import_file_path not in sys.path:
         if insert_to_front:
             sys.path.insert(0, import_file_path)
