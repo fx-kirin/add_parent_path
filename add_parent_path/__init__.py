@@ -14,10 +14,10 @@ def add_parent_path(count=1, child_path=None, insert_to_front: bool = True):
     import_file_path = str(caller_file_path.parents[count])
     if child_path:
         import_file_path = import_file_path / child_path
-    add_sys_paty_temporarily(import_file_path, insert_to_front)
+    add_sys_path_temporarily(import_file_path, insert_to_front)
 
 
-def add_sys_paty_temporarily(import_file_path, insert_to_front: bool = True):
+def add_sys_path_temporarily(import_file_path, insert_to_front: bool = True):
     if import_file_path not in sys.path:
         if insert_to_front:
             sys.path.insert(0, import_file_path)
