@@ -1,6 +1,0 @@
-import_parent_dir
-logzero
-logzero.egg
-pathlib2
-pytest
-setuptools
